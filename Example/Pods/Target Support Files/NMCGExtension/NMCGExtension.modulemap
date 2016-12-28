@@ -1,0 +1,6 @@
+framework module NMCGExtension {
+  umbrella header "NMCGExtension-umbrella.h"
+
+  export *
+  module * { export * }
+}

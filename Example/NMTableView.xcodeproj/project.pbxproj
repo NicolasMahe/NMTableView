@@ -7,10 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03DA583D1E1380E0004E710C /* AutomaticHeightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DA58341E1380E0004E710C /* AutomaticHeightTableViewCell.swift */; };
+		03DA583E1E1380E0004E710C /* AutomaticHeightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03DA58351E1380E0004E710C /* AutomaticHeightTableViewCell.xib */; };
+		03DA583F1E1380E0004E710C /* AutomaticHeightTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DA58361E1380E0004E710C /* AutomaticHeightTableViewController.swift */; };
+		03DA58401E1380E0004E710C /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DA58371E1380E0004E710C /* SearchTableViewController.swift */; };
+		03DA58411E1380E0004E710C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DA58381E1380E0004E710C /* TableViewCell.swift */; };
+		03DA58421E1380E0004E710C /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03DA58391E1380E0004E710C /* TableViewCell.xib */; };
+		03DA58431E1380E0004E710C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DA583A1E1380E0004E710C /* TableViewController.swift */; };
+		03DA58441E1380E0004E710C /* TableViewHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DA583B1E1380E0004E710C /* TableViewHeaderViewController.swift */; };
+		03DA58451E1380E0004E710C /* TableViewHeaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03DA583C1E1380E0004E710C /* TableViewHeaderViewController.xib */; };
 		1D3BC8CA7C87DB229FE92C41 /* Pods_NMTableView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52BF68795DB73C8172A30707 /* Pods_NMTableView_Tests.framework */; };
 		531260EC43E16C021BD04073 /* Pods_NMTableView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F4D752DDD2E7BE4E9A9BDB /* Pods_NMTableView_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
@@ -28,23 +36,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03DA58341E1380E0004E710C /* AutomaticHeightTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutomaticHeightTableViewCell.swift; sourceTree = "<group>"; };
+		03DA58351E1380E0004E710C /* AutomaticHeightTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutomaticHeightTableViewCell.xib; sourceTree = "<group>"; };
+		03DA58361E1380E0004E710C /* AutomaticHeightTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutomaticHeightTableViewController.swift; sourceTree = "<group>"; };
+		03DA58371E1380E0004E710C /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		03DA58381E1380E0004E710C /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		03DA58391E1380E0004E710C /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		03DA583A1E1380E0004E710C /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		03DA583B1E1380E0004E710C /* TableViewHeaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewHeaderViewController.swift; sourceTree = "<group>"; };
+		03DA583C1E1380E0004E710C /* TableViewHeaderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewHeaderViewController.xib; sourceTree = "<group>"; };
 		073DE0B6F004BAA90D08C23F /* Pods-NMTableView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NMTableView_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NMTableView_Tests/Pods-NMTableView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		195EAEBBB353A0E4BC1E8FB2 /* Pods-NMTableView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NMTableView_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NMTableView_Example/Pods-NMTableView_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		21D005BD90CD5B1FAE9EBA36 /* NMTableView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = NMTableView.podspec; path = ../NMTableView.podspec; sourceTree = "<group>"; };
+		21D005BD90CD5B1FAE9EBA36 /* NMTableView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NMTableView.podspec; path = ../NMTableView.podspec; sourceTree = "<group>"; };
 		44F4D752DDD2E7BE4E9A9BDB /* Pods_NMTableView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NMTableView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BF68795DB73C8172A30707 /* Pods_NMTableView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NMTableView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* NMTableView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NMTableView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* NMTableView_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NMTableView_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		C50C93C11A4AB1229BB5C30F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		C73FDF7D2AB63E720F534971 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		C50C93C11A4AB1229BB5C30F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		C73FDF7D2AB63E720F534971 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		DFF5AB0F97269CA37EF6C18C /* Pods-NMTableView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NMTableView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NMTableView_Tests/Pods-NMTableView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F1655B0A15C3EDB8E07F602B /* Pods-NMTableView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NMTableView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-NMTableView_Example/Pods-NMTableView_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,7 +119,15 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				03DA58341E1380E0004E710C /* AutomaticHeightTableViewCell.swift */,
+				03DA58351E1380E0004E710C /* AutomaticHeightTableViewCell.xib */,
+				03DA58361E1380E0004E710C /* AutomaticHeightTableViewController.swift */,
+				03DA58371E1380E0004E710C /* SearchTableViewController.swift */,
+				03DA58381E1380E0004E710C /* TableViewCell.swift */,
+				03DA58391E1380E0004E710C /* TableViewCell.xib */,
+				03DA583A1E1380E0004E710C /* TableViewController.swift */,
+				03DA583B1E1380E0004E710C /* TableViewHeaderViewController.swift */,
+				03DA583C1E1380E0004E710C /* TableViewHeaderViewController.xib */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -210,14 +234,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0810;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -246,9 +272,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03DA583E1E1380E0004E710C /* AutomaticHeightTableViewCell.xib in Resources */,
+				03DA58421E1380E0004E710C /* TableViewCell.xib in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				03DA58451E1380E0004E710C /* TableViewHeaderViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,8 +388,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				03DA58441E1380E0004E710C /* TableViewHeaderViewController.swift in Sources */,
+				03DA58431E1380E0004E710C /* TableViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				03DA58401E1380E0004E710C /* SearchTableViewController.swift in Sources */,
+				03DA58411E1380E0004E710C /* TableViewCell.swift in Sources */,
+				03DA583F1E1380E0004E710C /* AutomaticHeightTableViewController.swift in Sources */,
+				03DA583D1E1380E0004E710C /* AutomaticHeightTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,8 +449,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -439,7 +475,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -460,8 +496,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -477,9 +515,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -488,12 +527,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 195EAEBBB353A0E4BC1E8FB2 /* Pods-NMTableView_Example.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NMTableView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -501,12 +542,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F1655B0A15C3EDB8E07F602B /* Pods-NMTableView_Example.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NMTableView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -526,6 +569,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -541,6 +585,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
