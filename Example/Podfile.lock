@@ -2,7 +2,7 @@ PODS:
   - NMCGExtension (0.0.1)
   - NMTableView (0.0.1):
     - NMUIExtension
-  - NMUIExtension (0.0.1):
+  - NMUIExtension (0.0.5):
     - NMCGExtension
     - SnapKit (~> 3.0)
   - SnapKit (3.1.2)
@@ -17,7 +17,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   NMCGExtension: 734b1af8b2c5651e8191ef0367b1b9e75e820e54
   NMTableView: 2c49ed737bde559f15cd8f0e377b54c3206780c8
-  NMUIExtension: 608d1e38c07613068ba44ab1303686d8085db383
+  NMUIExtension: 3b5182d90dc628f24d8c588e8c911c95089201ed
   SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
 
 PODFILE CHECKSUM: 867e2108963e1dfa0b7367be3759f7c5f0a80c6d

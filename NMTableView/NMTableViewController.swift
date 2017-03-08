@@ -204,10 +204,7 @@ open class NMTableViewController: UITableViewController, UISearchResultsUpdating
     
     self.setSeparatorStyle()
     
-    //bring view to front
-    self.tableView.bringSubview(toFront: emptyController.view)
-    guard let tableHeaderView = self.tableView.tableHeaderView else { return }
-    self.tableView.bringSubview(toFront: tableHeaderView)
+    self.bringSubviewToFront()
   }
   
   //----------------------------------------------------------------------------
@@ -222,12 +219,7 @@ open class NMTableViewController: UITableViewController, UISearchResultsUpdating
       self.setEmptyViewState(forceShow: self.shouldShowLoader == true ? false : nil)
       self.setSeparatorStyle()
       
-      //bring view to front
-      guard let loaderController = self.loaderController else { return }
-      self.tableView.bringSubview(toFront: loaderController.view)
-      
-      guard let tableHeaderView = self.tableView.tableHeaderView else { return }
-      self.tableView.bringSubview(toFront: tableHeaderView)
+      self.bringSubviewToFront()
     }
   }
   open var loaderController: UIViewController? {
@@ -239,6 +231,22 @@ open class NMTableViewController: UITableViewController, UISearchResultsUpdating
         toView: self.tableView //@todo: the view doesn't cover all the table view content when the table view content is longer than the screen
       )
       self.shouldShowLoader = false
+    }
+  }
+  
+  //----------------------------------------------------------------------------
+  // MARK: - Helper
+  //----------------------------------------------------------------------------
+  
+  public func bringSubviewToFront() {
+    if let emptyController = self.emptyController {
+      self.tableView.bringSubview(toFront: emptyController.view)
+    }
+    if let loaderController = self.loaderController {
+      self.tableView.bringSubview(toFront: loaderController.view)
+    }
+    if let tableHeaderView = self.tableView.tableHeaderView {
+      self.tableView.bringSubview(toFront: tableHeaderView)
     }
   }
   
