@@ -1,6 +1,0 @@
-framework module NMTableView {
-  umbrella header "NMTableView-umbrella.h"
-
-  export *
-  module * { export * }
-}

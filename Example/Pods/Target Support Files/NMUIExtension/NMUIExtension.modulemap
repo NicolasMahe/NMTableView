@@ -1,6 +1,0 @@
-framework module NMUIExtension {
-  umbrella header "NMUIExtension-umbrella.h"
-
-  export *
-  module * { export * }
-}
