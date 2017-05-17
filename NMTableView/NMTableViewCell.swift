@@ -19,5 +19,22 @@ open class NMTableViewCell: UITableViewCell {
   
   public weak var tableViewController: NMTableViewController?
   public var indexPath: IndexPath?
+  
+  //----------------------------------------------------------------------------
+  // MARK: - Helper
+  //----------------------------------------------------------------------------
+  
+  public var isLastRow: Bool {
+    if let indexPath = self.indexPath,
+      let tableViewController = self.tableViewController {
+      let numberOfRows = tableViewController.tableView.numberOfRows(inSection: indexPath.section)
+      
+      if numberOfRows == indexPath.row + 1 {
+        return true
+      }
+    }
+    
+    return false
+  }
 
 }
