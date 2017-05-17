@@ -39,7 +39,7 @@ open class NMTableViewController: UITableViewController, UISearchResultsUpdating
   
   var headerControllerCache = [Int: NMTableViewHeaderViewController]()
   
-  var dataSourceTyped: NMTableViewDataSource? {
+  public var dataSourceTyped: NMTableViewDataSource? {
     return self.tableView.dataSource as? NMTableViewDataSource
   }
   
@@ -213,10 +213,17 @@ open class NMTableViewController: UITableViewController, UISearchResultsUpdating
   
   //@todo: add example
   //@todo: add default controller
-  public var shouldShowLoader: Bool = false {
+  public var shouldShowLoader: Int = 0 {
     didSet {
-      self.loaderController?.view.isHidden = self.shouldShowLoader == false
-      self.setEmptyViewState(forceShow: self.shouldShowLoader == true ? false : nil)
+      //check if inferior to 0
+      if self.shouldShowLoader < 0 {
+        self.shouldShowLoader = 0
+      }
+      
+      self.reloadTableView()
+      
+      self.loaderController?.view.isHidden = self.shouldShowLoader == 0
+      self.setEmptyViewState(forceShow: self.shouldShowLoader > 0 ? false : nil)
       self.setSeparatorStyle()
       
       self.bringSubviewToFront()
@@ -230,7 +237,7 @@ open class NMTableViewController: UITableViewController, UISearchResultsUpdating
         viewController: loaderController,
         toView: self.tableView //@todo: the view doesn't cover all the table view content when the table view content is longer than the screen
       )
-      self.shouldShowLoader = false
+      self.shouldShowLoader = 0
     }
   }
   
@@ -261,7 +268,7 @@ open class NMTableViewController: UITableViewController, UISearchResultsUpdating
   }
   
   func setSeparatorStyle() {
-    let conditionShow = self.shouldShowLoader == true || self.emptyControllerShowCondition?() == true
+    let conditionShow = self.shouldShowLoader > 0 || self.emptyControllerShowCondition?() == true
     self.tableView.separatorStyle = conditionShow ? .none : self.separatorStyleDefault
   }
   
