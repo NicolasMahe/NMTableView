@@ -21,7 +21,7 @@ open class NMTableViewDataSource: NSObject, UITableViewDataSource {
   /**
    Array of all cell init from these table view controller
    */
-  var tableViewCells = [NMTableViewCell?]()
+  public var tableViewCells = [NMTableViewCell?]()
   
   /**
    The array of NMTableViewCellData
@@ -59,6 +59,12 @@ open class NMTableViewDataSource: NSObject, UITableViewDataSource {
   //----------------------------------------------------------------------------
   
   public func numberOfSections(in tableView: UITableView) -> Int {
+    //wait for tableView to load completely
+    guard self.tableViewController?.shouldShowLoader == 0
+      else {
+        return 0
+    }
+    
     return self.cellsData.count
   }
   
