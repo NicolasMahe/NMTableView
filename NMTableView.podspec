@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'NMTableView'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = 'Improved UITableView'
   s.description      = <<-DESC
 An improved version of UITableView.
