@@ -152,8 +152,11 @@ open class NMTableViewController: UITableViewController, UISearchResultsUpdating
   // MARK: - Search
   //----------------------------------------------------------------------------
   
-  var searchController: UISearchController?
-  public var searchFilter: ((_ search: String) -> Void)? {
+  var searchController: UISearchController? {
+    willSet {
+      //first remove old tableView.tableHeaderView
+      self.tableView.tableHeaderView?.removeFromSuperview()
+    }
     didSet {
       guard self.searchController == nil else { return }
       self.searchController = UISearchController(searchResultsController: nil)
@@ -163,6 +166,7 @@ open class NMTableViewController: UITableViewController, UISearchResultsUpdating
       self.definesPresentationContext = true
     }
   }
+  public var searchFilter: ((_ search: String) -> Void)?
   
   open func updateSearchResults(for searchController: UISearchController) {
     guard let search = searchController.searchBar.text else { return }
@@ -182,7 +186,12 @@ open class NMTableViewController: UITableViewController, UISearchResultsUpdating
     }
   }
   open var emptyController: UIViewController? {
+    willSet {
+      //first remove old emptyController view
+      self.emptyController?.view.removeFromSuperview()
+    }
     didSet {
+      //set empty controller view
       guard let emptyController = self.emptyController
         else { return }
       self.add(
@@ -230,7 +239,12 @@ open class NMTableViewController: UITableViewController, UISearchResultsUpdating
     }
   }
   open var loaderController: UIViewController? {
+    willSet {
+      //first remove old loaderController view
+      self.loaderController?.view.removeFromSuperview()
+    }
     didSet {
+      //set loader controller view
       guard let loaderController = self.loaderController
         else { return }
       self.add(
