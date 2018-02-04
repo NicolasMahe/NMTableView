@@ -26,7 +26,7 @@ open class NMTableViewDataSource: NSObject, UITableViewDataSource {
   /**
    The array of NMTableViewCellData
    */
-  var cellsData: [NMTableViewCellData]
+  public var cellsData: [NMTableViewCellData]
   
   /**
    Table View Controller

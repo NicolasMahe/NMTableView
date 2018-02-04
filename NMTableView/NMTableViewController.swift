@@ -199,11 +199,12 @@ open class NMTableViewController: UITableViewController, UISearchResultsUpdating
   }
   
   open func setEmptyViewState(forceShow: Bool? = nil) {
-    guard let emptyController = self.emptyController,
-      var conditionShow = self.emptyControllerShowCondition?()
+    guard let emptyController = self.emptyController
       else { return }
     
-    conditionShow = forceShow ?? conditionShow
+    let conditionShow: Bool = forceShow
+      ?? (self.shouldShowLoader <= 0
+         && self.emptyControllerShowCondition?() == true)
     
     emptyController.view.isHidden = conditionShow == false
     

@@ -7,37 +7,32 @@
 //
 
 import UIKit
+import PromiseKit
 
 /**
  The cell data structure
  */
 open class NMTableViewCellData {
-  var cellClass: NMTableViewCell.Type
-  var numberOfRows: (_ inSection: Int) -> Int
-  var config: (_ cell: NMTableViewCell, _ indexPath: IndexPath) -> Void
-  var didSelect: (_ cell: NMTableViewCell, _ tableView: UITableView, _ indexPath: IndexPath) -> Void
-  var headerClass: NMTableViewHeaderViewController.Type?
-  var headerConfig: (_ controller: NMTableViewHeaderViewController, _ section: Int) -> Void
+  public var cellClass: NMTableViewCell.Type
+  public var numberOfRows: (_ inSection: Int) -> Int
+  public var config: (_ cell: NMTableViewCell, _ indexPath: IndexPath) -> Void
+  public var didSelect: (_ cell: NMTableViewCell, _ tableView: UITableView, _ indexPath: IndexPath) -> Void
+  public var headerClass: NMTableViewHeaderViewController.Type?
+  public var headerConfig: (_ controller: NMTableViewHeaderViewController, _ section: Int) -> Void
   
   /**
    Classic init
    */
   public init<T: NMTableViewCell, V: NMTableViewHeaderViewController>(
     cellClass: T.Type,
-    numberOfRows: ((_ inSection: Int) -> Int)? = nil,
+    numberOfRows: @escaping ((_ inSection: Int) -> Int) = { (_) -> Int in return 1 },
     config: ((_ cell: T, _ indexPath: IndexPath) -> Void)? = nil,
     didSelect: ((_ cell: T, _ tableView: UITableView, _ indexPath: IndexPath) -> Void)? = nil,
     headerClass: V.Type? = nil,
     headerConfig: ((_ controller: V, _ section: Int) -> Void)? = nil
   ) {
     self.cellClass = cellClass
-    
-    if let numberOfRows = numberOfRows {
-      self.numberOfRows = numberOfRows
-    }
-    else {
-      self.numberOfRows = { (_) -> Int in return 1 }
-    }
+    self.numberOfRows = numberOfRows
     
     self.config = { (cell: NMTableViewCell, indexPath: IndexPath) -> Void in
       let cell = cell as! T
@@ -54,6 +49,14 @@ open class NMTableViewCellData {
       let controller = controller as! V
       headerConfig?(controller, section)
     }
+  }
+  
+  /**
+   This function force the data to be refreshed.
+   Nothing to do is this class
+   */
+  open func reloadData() -> Promise<Void> {
+    return Promise(value: ())
   }
   
   
